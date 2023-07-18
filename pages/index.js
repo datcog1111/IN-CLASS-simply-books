@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { getBooks } from '../api/bookData';
+// import { getAuthors } from '../api/authorData';
 import { useAuth } from '../utils/context/authContext';
 import BookCard from '../components/BookCard';
 
