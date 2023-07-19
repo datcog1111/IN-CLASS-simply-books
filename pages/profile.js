@@ -1,5 +1,5 @@
 import React from 'react';
-import UserProfile from '../components/UserProfile';
+import UserProfile from '../components/userProfile';
 // import { useAuth } from '../utils/context/authContext';
 
 export default function Profile() {

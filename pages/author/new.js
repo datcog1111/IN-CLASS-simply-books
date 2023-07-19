@@ -1,8 +1,6 @@
-// import React from 'react';
-// import  from '../../components/forms/AuthorForm.js';
+import React from 'react';
+import AuthorForm from '../../components/forms/AuthorForm';
 
-// // TODO: create a reusable form to add/edit book and render in this view
-
-// export default function AddBook() {
-//   return <BookForm />;
-// }
+export default function AddAuthor() {
+  return <AuthorForm />;
+}

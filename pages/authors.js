@@ -4,24 +4,24 @@ import { React, useEffect, useState } from 'react';
 // import { Button } from 'react-bootstrap';
 import { getAuthors } from '../api/authorData';
 import { useAuth } from '../utils/context/authContext';
-import AuthorCard from '../components/BookCard';
+import AuthorCard from '../components/AuthorCard';
 
 export default function AuthorPage() {
-  const { user } = useAuth;
+  const { user } = useAuth();
   const [authors, setAuthors] = useState([]);
 
-  const getAllTheAuthors = () => {
+  const getAllAuthors = () => {
     getAuthors(user.uid).then(setAuthors);
   };
 
   useEffect(() => {
-    getAllTheAuthors();
+    getAllAuthors();
   }, []);
 
   return (
     <div>
       {authors.map((author) => (
-        <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllTheAuthors} />
+        <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllAuthors} />
       ))}
     </div>
   );
